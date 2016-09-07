@@ -232,19 +232,6 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDu-3G-oOg">
-                                        <rect key="frame" x="14" y="333" width="566" height="29"/>
-                                        <color key="backgroundColor" red="1" green="0.74352984562986002" blue="0.1032394304978218" alpha="1" colorSpace="calibratedRGB"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="kjkjhk">
-                                                <attributes>
-                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ZAM-G1-aC5" firstAttribute="centerX" secondItem="epA-Rv-kur" secondAttribute="centerX" id="1i9-PM-Hnz"/>
@@ -258,7 +245,6 @@
                                     <constraint firstItem="zrU-mc-3NM" firstAttribute="centerX" secondItem="epA-Rv-kur" secondAttribute="centerX" id="Gkw-hv-g7x"/>
                                     <constraint firstItem="W92-47-cWn" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="20" id="Gp3-Ln-I1S"/>
                                     <constraint firstItem="W92-47-cWn" firstAttribute="top" secondItem="ZAM-G1-aC5" secondAttribute="bottom" constant="8" id="H2c-9q-hJ3"/>
-                                    <constraint firstItem="cDu-3G-oOg" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="3" id="HaA-ea-Ypw"/>
                                     <constraint firstItem="zrU-mc-3NM" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="20" id="HoB-z1-FJq"/>
                                     <constraint firstItem="gbM-m7-9LW" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="20" id="HtE-Ro-5r2"/>
                                     <constraint firstItem="W92-47-cWn" firstAttribute="top" secondItem="gbM-m7-9LW" secondAttribute="bottom" constant="3" id="L7N-M0-s4f"/>
@@ -271,10 +257,7 @@
                                     <constraint firstItem="Qs3-C3-Gke" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="20" id="V9O-HW-rN9"/>
                                     <constraint firstAttribute="trailing" secondItem="Qs3-C3-Gke" secondAttribute="trailing" constant="20" id="a5g-ZQ-yP2"/>
                                     <constraint firstItem="gbM-m7-9LW" firstAttribute="centerX" secondItem="epA-Rv-kur" secondAttribute="centerX" id="b84-AO-HRN"/>
-                                    <constraint firstAttribute="trailing" secondItem="cDu-3G-oOg" secondAttribute="trailing" constant="3" id="bcV-0e-mxL"/>
                                     <constraint firstItem="W92-47-cWn" firstAttribute="leading" secondItem="epA-Rv-kur" secondAttribute="leading" constant="20" id="cat-Kq-mSd"/>
-                                    <constraint firstItem="cDu-3G-oOg" firstAttribute="centerX" secondItem="epA-Rv-kur" secondAttribute="centerX" id="dL2-vL-6jS"/>
-                                    <constraint firstItem="cDu-3G-oOg" firstAttribute="top" secondItem="Gez-NX-s4k" secondAttribute="bottom" constant="15" id="dY5-rX-5F6"/>
                                     <constraint firstAttribute="trailing" secondItem="W92-47-cWn" secondAttribute="trailing" constant="20" id="oAt-b9-9iR"/>
                                     <constraint firstItem="W92-47-cWn" firstAttribute="centerX" secondItem="epA-Rv-kur" secondAttribute="centerX" id="oQk-on-ooC"/>
                                     <constraint firstAttribute="trailing" secondItem="ZAM-G1-aC5" secondAttribute="trailing" constant="20" id="q8D-KR-byr"/>
