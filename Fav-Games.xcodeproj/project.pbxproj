@@ -19,6 +19,7 @@
 		87C1C7F91D7EAFA4002B7703 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C1C7F71D7EAFA4002B7703 /* VideoGame.swift */; };
 		87E98D131D7F61C700EE6F14 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E98D121D7F61C700EE6F14 /* GameCell.swift */; };
 		87E98D151D7FA5A300EE6F14 /* CreateGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E98D141D7FA5A300EE6F14 /* CreateGameVC.swift */; };
+		87E98D191D80EF5F00EE6F14 /* DetailedGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E98D181D80EF5F00EE6F14 /* DetailedGameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		87C1C7F71D7EAFA4002B7703 /* VideoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoGame.swift; path = ../VideoGame.swift; sourceTree = "<group>"; };
 		87E98D121D7F61C700EE6F14 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		87E98D141D7FA5A300EE6F14 /* CreateGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameVC.swift; sourceTree = "<group>"; };
+		87E98D181D80EF5F00EE6F14 /* DetailedGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedGameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				87C1C7F31D7EAF3C002B7703 /* Model */,
 				87C1C7EB1D7E0F7F002B7703 /* Logic.rtf */,
 				87C1C7E01D7E0DBE002B7703 /* Assets.xcassets */,
+				87C1C7E21D7E0DBE002B7703 /* LaunchScreen.storyboard */,
 				87C1C7E51D7E0DBE002B7703 /* Info.plist */,
 				87C1C7DD1D7E0DBE002B7703 /* Fav_Games.xcdatamodeld */,
 			);
@@ -93,10 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				87C1C7DA1D7E0DBE002B7703 /* Main.storyboard */,
-				87C1C7E21D7E0DBE002B7703 /* LaunchScreen.storyboard */,
 				87C1C7ED1D7E296C002B7703 /* 8-Bit Madness.ttf */,
 				87E98D121D7F61C700EE6F14 /* GameCell.swift */,
-				87E98D141D7FA5A300EE6F14 /* CreateGameVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -105,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				87C1C7D81D7E0DBE002B7703 /* ViewController.swift */,
+				87E98D141D7FA5A300EE6F14 /* CreateGameVC.swift */,
+				87E98D181D80EF5F00EE6F14 /* DetailedGameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				87C1C7D91D7E0DBE002B7703 /* ViewController.swift in Sources */,
 				87E98D151D7FA5A300EE6F14 /* CreateGameVC.swift in Sources */,
 				87C1C7D71D7E0DBE002B7703 /* AppDelegate.swift in Sources */,
+				87E98D191D80EF5F00EE6F14 /* DetailedGameVC.swift in Sources */,
 				87E98D131D7F61C700EE6F14 /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

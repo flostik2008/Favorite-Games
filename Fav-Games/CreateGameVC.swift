@@ -14,24 +14,27 @@ class CreateGameVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var gameImage: UIImageView!
     @IBOutlet weak var gameTitle: UITextField!
-    @IBOutlet weak var gameDesc: UITextField!
+    
+    @IBOutlet weak var descView: UITextView!
+
     @IBOutlet weak var mgLink: UITextField!
     @IBOutlet weak var offLink: UITextField!
-    @IBOutlet weak var note: UITextField!
-    @IBOutlet weak var addImgBtn: UIButton!
+ 
+    @IBOutlet weak var noteView: UITextView!
     
+    @IBOutlet weak var addImgBtn: UIButton!
+    @IBOutlet weak var addGameBtn: UIButton! 
     
     var imagePicker: UIImagePickerController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-// we might have to use is.
-//    scrollView.contentSize = CGSizeMake(width: CGFloat, height: CGFloat)
+
 
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        addGameBtn.layer.cornerRadius = 5.0
         
         
     }
@@ -41,6 +44,7 @@ class CreateGameVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         gameImage.image = image
         addImgBtn.hidden = true
+        gameImage.alpha = 1
         
     }
 
@@ -57,9 +61,9 @@ class CreateGameVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             let videoGame = VideoGame(entity: entity, insertIntoManagedObjectContext: context)
             
             videoGame.title = gameTitle.text
-            videoGame.desc = gameDesc.text
+            videoGame.desc = descView.text
             videoGame.mgLink = mgLink.text
-            videoGame.note = note.text
+            videoGame.note = noteView.text
             videoGame.offLink = offLink.text
             videoGame.setGameImage(gameImage.image!)
             

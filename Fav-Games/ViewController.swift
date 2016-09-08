@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -68,5 +69,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return videoGames.count
         
     }
+    
+    
+    func tableView(tableView: UITableView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let videoGame = videoGames[indexPath.row]
+        
+        print(videoGame.title)
+        
+        performSegueWithIdentifier("DetailedGameVC", sender: videoGame)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailedGameVC" {
+            if let detailedVC = segue.destinationViewController as? DetailedGameVC {
+                if let videoGame = sender as? VideoGame {
+                    detailedVC.videoGame = videoGame
+                    
+                    print(detailedVC.videoGame.title)
+
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
 }
 
