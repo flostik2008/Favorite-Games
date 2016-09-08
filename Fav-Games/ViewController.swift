@@ -71,13 +71,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let videoGame = videoGames[indexPath.row]
-        
-        print(videoGame.title)
-        
         performSegueWithIdentifier("DetailedGameVC", sender: videoGame)
+        
+        print("Did select row at index path")
+
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -86,7 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if let videoGame = sender as? VideoGame {
                     detailedVC.videoGame = videoGame
                     
-                    print(detailedVC.videoGame.title)
+                    print("Prepared for segue")
 
                 }
             }

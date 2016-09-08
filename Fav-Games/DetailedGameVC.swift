@@ -16,10 +16,16 @@ class DetailedGameVC: UIViewController {
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var gameDesc: UILabel!
     @IBOutlet weak var gameNote: UILabel!
+    @IBOutlet weak var webBtn: UIButton!
+    @IBOutlet weak var mgBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        webBtn.layer.cornerRadius = 5.0
+        mgBtn.layer.cornerRadius = 5.0
+        
         gameImg.image = videoGame.getGameImage()
         gameTitle.text = videoGame.title
         gameDesc.text = videoGame.desc

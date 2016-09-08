@@ -526,7 +526,7 @@
                                                     <constraint firstAttribute="width" constant="150" id="yES-Sr-83U"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="8-Bit-Madness" family="Eight-Bit Madness" pointSize="30"/>
-                                                <state key="normal" title="MORE...">
+                                                <state key="normal" title="MORE">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -596,6 +596,8 @@
                         <outlet property="gameImg" destination="3xL-Pb-2NM" id="v3f-Fw-sS7"/>
                         <outlet property="gameNote" destination="YKL-Mw-K8S" id="220-Ri-gWt"/>
                         <outlet property="gameTitle" destination="0gp-Uu-oja" id="P31-Wu-buE"/>
+                        <outlet property="mgBtn" destination="Nbi-9g-nLR" id="arp-6m-hBV"/>
+                        <outlet property="webBtn" destination="y0D-Sn-KlE" id="jtv-Jd-ghz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sv4-Cg-UZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
