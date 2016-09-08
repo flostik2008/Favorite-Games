@@ -57,8 +57,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             return GameCell()
         }
-
-        
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -67,7 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videoGames.count
-        
     }
     
     
@@ -77,7 +74,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegueWithIdentifier("DetailedGameVC", sender: videoGame)
         
         print("Did select row at index path")
-
         
     }
     
@@ -93,10 +89,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-    
-    
-    
-    
     
 }
 

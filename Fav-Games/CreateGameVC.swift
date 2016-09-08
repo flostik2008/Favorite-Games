@@ -36,6 +36,11 @@ class CreateGameVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         imagePicker.delegate = self
         addGameBtn.layer.cornerRadius = 5.0
         
+        let customFont = UIFont(name: "Eight-Bit Madness", size: 30.0)        
+//        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: customFont!]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!, ], forState: UIControlState.Normal)
+        
+        
         
     }
     

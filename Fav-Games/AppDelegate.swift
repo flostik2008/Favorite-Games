@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         
-        let customFont = UIFont(name: "Eight-Bit Madness", size: 30.0)
-        
-        
-        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: customFont!]
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!, ], forState: UIControlState.Normal)
-
-  
+//        let customFont = UIFont(name: "Eight-Bit Madness", size: 30.0)
+//        
+//        
+//        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: customFont!]
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!, ], forState: UIControlState.Normal)
+//
+//  
         
         return true
     }

@@ -19,6 +19,7 @@ class DetailedGameVC: UIViewController {
     @IBOutlet weak var webBtn: UIButton!
     @IBOutlet weak var mgBtn: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,11 @@ class DetailedGameVC: UIViewController {
         gameDesc.text = videoGame.desc
         gameNote.text = videoGame.note
         
+        gameDesc.sizeToFit()
+        gameNote.sizeToFit()
         
+        scrollView.frame=CGRectMake(0,0,320,self.view.frame.size.height-44)
+    
     }
 
 
