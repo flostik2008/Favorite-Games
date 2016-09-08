@@ -20,7 +20,7 @@ class DetailedGameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        gameImg.image = videoGame.getGameImage()
+        gameImg.image = videoGame.getGameImage()
         gameTitle.text = videoGame.title
         gameDesc.text = videoGame.desc
         gameNote.text = videoGame.note
