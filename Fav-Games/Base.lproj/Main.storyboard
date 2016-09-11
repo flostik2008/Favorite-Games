@@ -242,8 +242,8 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="eEF-Nb-uwy"/>
                                                 <exclude reference="6Xf-NI-YU9"/>
+                                                <exclude reference="eEF-Nb-uwy"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -557,6 +557,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="offWebBtn:" destination="xhs-yR-XOA" eventType="touchUpInside" id="k2Y-fL-Pdb"/>
+                                                    <segue destination="dRA-7B-mts" kind="show" identifier="WebViewVC" id="21I-Ac-bFO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbi-9g-nLR">
@@ -572,6 +573,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="mgBtn:" destination="xhs-yR-XOA" eventType="touchUpInside" id="47w-0A-Rl1"/>
+                                                    <segue destination="dRA-7B-mts" kind="show" identifier="mgLink" id="i24-H7-kDv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -641,6 +643,69 @@
             </objects>
             <point key="canvasLocation" x="1835" y="1050"/>
         </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="0r4-gw-7ap">
+            <objects>
+                <viewController id="dRA-7B-mts" customClass="WebViewVC" customModule="Fav_Games" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="clN-T6-QkV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ctc-Ym-VO8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SW3-95-HLo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Gf-Np-bF8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-mW-LPS">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="xvl-sb-Yuq">
+                                        <connections>
+                                            <action selector="goBack" destination="7Gf-Np-bF8" id="zqO-CF-ofe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="NP5-Qu-dfV">
+                                        <connections>
+                                            <action selector="goForward" destination="7Gf-Np-bF8" id="bzf-mA-kd6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1aI-kh-Vep"/>
+                                    <barButtonItem systemItem="refresh" id="vSZ-mn-aIU">
+                                        <connections>
+                                            <action selector="reload" destination="7Gf-Np-bF8" id="4Uv-vq-nqf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="tB9-KV-as3">
+                                        <connections>
+                                            <action selector="stopLoading" destination="7Gf-Np-bF8" id="qMH-IB-CGW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Gf-Np-bF8" firstAttribute="leading" secondItem="SW3-95-HLo" secondAttribute="leading" id="3NQ-X5-CPh"/>
+                            <constraint firstItem="7Gf-Np-bF8" firstAttribute="top" secondItem="SW3-95-HLo" secondAttribute="top" id="EDT-N2-m93"/>
+                            <constraint firstItem="vDC-mW-LPS" firstAttribute="leading" secondItem="SW3-95-HLo" secondAttribute="leading" id="QV4-jc-zRN"/>
+                            <constraint firstItem="vDC-mW-LPS" firstAttribute="top" secondItem="7Gf-Np-bF8" secondAttribute="bottom" id="Uht-gG-zEV"/>
+                            <constraint firstAttribute="trailing" secondItem="vDC-mW-LPS" secondAttribute="trailing" id="fr6-Lm-EPv"/>
+                            <constraint firstItem="Ctc-Ym-VO8" firstAttribute="top" secondItem="vDC-mW-LPS" secondAttribute="bottom" id="t7K-PH-wjw"/>
+                            <constraint firstAttribute="trailing" secondItem="7Gf-Np-bF8" secondAttribute="trailing" id="tdD-bH-IHd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7Gf-Np-bF8" id="FWA-Kj-I3J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jrS-EO-Y67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586" y="1050"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kVg-ku-EwK">
             <objects>
@@ -667,5 +732,8 @@
     <resources>
         <image name="Just_Cause_2_Action_Adventure_Video_Game_Famous_Photos" width="1920" height="1200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="i24-H7-kDv"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

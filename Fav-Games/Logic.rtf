@@ -118,18 +118,64 @@ but now, when i click on one cell - nothing happens. And I can click many times.
 \strike0\striked0 When the Label gets populated it gets stretched horizontally / not vertically. \
 9. Implement the website buttons - WKWebView\
 \
+For the webViews we created a separate VC. \
+We have to pass data from videoGame object somehow to our new WebView. \
+We can pass that object as methods argument. \
+But what code is actually happening in the "buttonPressed" methods? - (going to check it in my Military school app)...\
 \
+Need to understand how much happens in the buttons VC and in the web VC. \
+So in the buttons VC - nothing happens - even no "btnPressed" methods. Buttons are simply connected to the WebView and everything is already happens there. \
 \
+I must create 1 webView, and the button method should pass the videoGame object with its link property.\
+When the button is pressed, we will "performSegueWithIdentifier" where will pass the videoGame object with its links. \
+Before we might use "prepareForSegue" method. We would grab an instance of videoGame from the DitailedVC and pass it to the webView. \
 \pard\pardeftab720\partightenfactor0
 \cf0 \
+Maybe I don't even need to "prepareForSegue" because there is no need to pass "videoGame" object to the webView. \
+Will try to build URLs right in the button's functions. \
 \pard\tx560\pardeftab720\partightenfactor0
 \cf0 \
+videoGame.offLink\
+videoGame.mgLink \
 \
+How to pass the "loadRequest" value to the WebViewVC ? \
+We need "webView.loadRequest(request)"\
+But we can't access webView from DetailedGameVC. \
 \
+Maybe we can create an instance of WebViewVC in our DetailedGameVC and say \
+"webViewVC.webView.loadRequest(request)"\
 \
+or, inside WebViewVC somehow pass the value of the request/ or "videoGame" itself. \
+(for that, uncomment the "prepareForSegue" where we actually set videoGame of webViewVC)\
 \
+I should connect viewController to the webView, instead of from buttons. But then I have to call segues differently. And then weird shit in "prepareForSegue"\
+googling: how to have multiple buttons into one webView. \
 \
+try with one segue / one wevView. First to fix storyboard issue. \
+- tried. Same. videoGame object is not being passed/  \
+Misstake is either in "prepareForSegue" or in storyboard. \
 \
+found smth: in main VC when the button is clicked, we perform segue with "sender: videoGame"... \
+in our DetailedVC we also use "sender: videoGame"\
+\
+try to pass "sender:videoGame.offLink"\
+\
+Worked. \
+Changes that I've made: \
+\'96 In storyboard made connection from the viewController itself instead of from the button. \
+\'96 changed from "@IBAction offWebBtn (videoGame: VideoGame)" to "...(sender: AnyObject)" \
+- changed from "perform....(.... , sender: videoGame)" thinking that we are taking it from IBAction argument, to "....(.., sender: videoGame1)"\
+-  in "prepareForSegue" took out the creation of a variable based on sender. because in our case, we already had it. \
+\
+Now, need to make the second button to work. \
+\
+Tried adding back both segues in storyboard, giving them identifiers, but that resulted in a crash. \
+Reverted back to one segue. \
+Deleted "performSegue" from code completely, made made the connection on storyboard. Works. \
+\
+Now, for some reason we get a mistake when pressing the second button (first works). \
+After checking with "print" statements, info gets passed, but the error still says that there is "nil".\
+My guess - smth is with storyboard. \
 \
 \
 \
