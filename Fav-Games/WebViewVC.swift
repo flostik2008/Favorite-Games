@@ -32,7 +32,7 @@ class WebViewVC: UIViewController {
         
             print("yo yo yo \(videoGame.mgLink)   ")
             
-            let urlStr1 = videoGame.mgLink!
+            let urlStr1 = videoGame.mgLink!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
             let url1 = NSURL(string: urlStr1)!
             let request = NSURLRequest(URL: url1)
             webView.loadRequest(request)

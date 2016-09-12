@@ -177,6 +177,19 @@ Now, for some reason we get a mistake when pressing the second button (first wor
 After checking with "print" statements, info gets passed, but the error still says that there is "nil".\
 My guess - smth is with storyboard. \
 \
+Solution StackOverflow: \
+space the user's link.  the "NSURL" couldn't make a url out of the string.  \
+When creating a string, append the command with ".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.UrlQueryAllowedCharacterSet( ))!"\
+\
+What's left now? \
+\
+\
+\
+\
+\
+\
+\
+\
 \
 \
 \
